@@ -24,6 +24,14 @@ class _Cart_productsState extends State<Cart_products> {
       "size": "M",
       "color": "red",
       "quantité": 1,
+    },
+    {
+      "name": "kita",
+      "picture": "images/imags.jpeg",
+      "prix": 815,
+      "size": "M",
+      "color": "red",
+      "quantité": 1,
     }
   ];
   @override
@@ -64,12 +72,15 @@ class Single_cart_product extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
+        //------leading Section-------------------
         leading: new Image.asset(
           cart_prod_picture,
-          width: 80.0,
-          height: 80.0,
+          width: 100.0,
+          height: 100.0,
         ),
+        //-------Title Section----------
         title: new Text("cart_prod_name"),
+        //====================Subtitle section
         subtitle: new Column(
           children: [
             //Row inside Column
@@ -113,10 +124,25 @@ class Single_cart_product extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.red),
               ),
+            ),
+          ],
+        ),
+        trailing: new Column(
+          children: [
+            new IconButton(
+              onPressed: null,
+              icon: Icon(Icons.arrow_drop_up),
+            ),
+            new Text("$cart_prod_quantite"),
+            new IconButton(
+              onPressed: null,
+              icon: Icon(Icons.arrow_drop_down),
             )
           ],
         ),
       ),
     );
   }
+
+  
 }

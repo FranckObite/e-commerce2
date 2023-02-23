@@ -10,7 +10,7 @@ class _ProState extends State<Products> {
   var product_list = [
     {
       "name": "tradi",
-      "picture": "images/images.jpeg",
+      "picture": "images/imagesYorouba.jpeg",
       "ancien_prix": 120,
       "prix": 85,
     },
@@ -58,7 +58,7 @@ class _ProState extends State<Products> {
               produst_name: product_list[index]['name'],
               prod_picture: product_list[index]['picture'],
               prod_ancien_prix: product_list[index]['ancien_prix'],
-              prod_prix: product_list[index]['pix']);
+              prod_prix: product_list[index]['prix']);
         });
   }
 }
